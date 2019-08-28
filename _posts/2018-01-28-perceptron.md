@@ -9,4 +9,5 @@ mathjax: "true"
 ## Time Series Analysis
 This is time series analysis for **TSLA's stock data**. I used R in this project. This task includes data cleaning using **dplyr** and data visualization using **ggplot2**.
 
-- (**Project Detail**)[/images/assessment.pdf]
+![Project Detail](./images/assessment.pdf)
+
