@@ -3,7 +3,7 @@ title: "Time Series Analysis"
 date: 2019-01-28
 tags: [data wrangling, data science, stock price]
 
-excerpt: "Data Wrangling, Data Science, Messy Data"
+excerpt: "Data Wrangling, Data Science, Data Cleaning, Data Visualization"
 mathjax: "true"
 ---
 
