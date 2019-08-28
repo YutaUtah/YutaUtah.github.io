@@ -2,7 +2,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Data Wrangling Projects"
+  - title: "Projects"
     url: /data-wrangling/
   - title: "CV"
     url: /images/Hayashi_Yuta.Resume.pdf
