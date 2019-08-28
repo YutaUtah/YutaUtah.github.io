@@ -86,18 +86,18 @@ analytics:
 author:
   name             : "Yuta Hayashi"
   avatar           : "/images/graduation.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data Science Portfolio"
-  location         : "Your Location"
-  email            :
+  bio              : "Data Enthusiast"
+  location         : "Appleton, WI, USA"
+  email            : "yuta.hayashi.soccer@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : 
   foursquare       :
-  github           : "Your Github"
+  github           : "YutaUtah"
   gitlab           :
   google_plus      :
   keybase          :
