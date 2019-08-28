@@ -4,4 +4,7 @@ permalink: /about/
 
 ---
 
-I recently graduated from [Lawrence University](http://lawrence.edu) in Appleton, WI majoring in Mathematics and minoring in Physics and Anthropology. I am the one that excels at explanatory analysis, data visualizations, and machine learning. I grew up in Tokyo, Japan and graduated from [Shiba Senior High School](https://www.shiba.ac.jp/). My hobby includes playing soccer. I played for [Lawrence University Men's Soccer Team](http://vikings.lawrence.edu/sports/msoc/index)! 
+
+<h3>About</h3>
+<p>My name is Yuta Hayashi, and I recently graduated from  <a href="http://lawrence.edu">Lawrence University</a> in Appleton, WI majoring in Mathematics and minoring in Physics and Anthropology. I am the one that excels at explanatory analysis, data visualizations, and machine learning. I grew up in Tokyo, Japan and graduated from <a href="https://www.shiba.ac.jp/">Shiba Senior High School</a>. My hobby includes playing soccer. I played for <a href="http://vikings.lawrence.edu/sports/msoc/index">Lawrence University Men's Soccer Team</a>!</p>
+ 
