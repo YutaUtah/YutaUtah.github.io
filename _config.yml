@@ -13,7 +13,7 @@ title                    : "Yuta Hayashi"
 title_separator          : "-"
 name                     : "Yuta Hayashi"
 description              : "Data Portfolio"
-url                      : # the base hostname & protocol for your e.g. "https://mmistakes.github.io"
+url                      : "https://YutaUtah.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -91,28 +91,15 @@ author:
   email            : "yuta.hayashi.soccer@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
   facebook         : "yutaponta.go.piano" 
-  foursquare       :
   github           : "YutaUtah"
   gitlab           :
   google_plus      :
-  keybase          :
   instagram        :
-  lastfm           :
-  linkedin         : "yuta-hayashi-884409b2" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  pinterest        :
-  soundcloud       :
+  linkedin         : "yuta-hayashi-884409b2" 
+  
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           :
   twitter          :
-  vine             :
-  weibo            :
-  xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
 
