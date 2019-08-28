@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Projects"
-    url: /data-wrangling/
+    url: /projects/
   - title: "CV"
     url: /images/Hayashi_Yuta.Resume.pdf
   # - title: "Sample Posts"
