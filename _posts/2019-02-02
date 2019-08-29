@@ -1,0 +1,10 @@
+---
+title: "Senior Project"
+mathjax: "true"
+---
+
+This is my capstone project for Math 699 independent research. I utilized **R** to cluster the data and identified players who were not aligned with their pay
+
+
+<p> - <a href="/images/capstone.pptx">Project Details</a></p>
+<p> - <a href="/school project/fifa2.Rmd">R Code</a></p>
