@@ -1,6 +1,6 @@
 ---
 title: "About"
-permanentlink: /_pages/about.md
+permanentlink: /_pages/about
 
 ---
 
