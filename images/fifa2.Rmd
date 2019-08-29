@@ -5,11 +5,8 @@ date: "5/5/2019"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-```{r,message=FALSE warning=FALSE}
+
 library(tidyverse)
 library(scales)
 library(ggthemes)
@@ -17,14 +14,13 @@ library(kableExtra)
 library(readr)
 library(plotly)
 options(scipen = 999)
-```
 
-```{r,warning=FALSE, message=FALSE}
+
 fifa_data <- read_csv("data.csv") %>% select(-X1)
-```
 
 
-```{r}
+
+
 #Data manipulation in this chunk includes the modification of salary of players
 fifa_data <- fifa_data %>%
   mutate(ValueMultiplier = ifelse(str_detect(Value, "K"), 1000, ifelse(str_detect(Value, "M"), 1000000, 1))) %>%
@@ -52,19 +48,19 @@ fifa_data <- fifa_data %>%
 
 fifa_data <- fifa_data %>%
   mutate(AgeGroup = ifelse(Age <= 20, "20 and under", ifelse(Age > 20 & Age <=25, "21 to 25", ifelse(Age > 25 & Age <= 30, "25 to 30", ifelse(Age > 30 & Age <= 35, "31 to 35", "Over 35")))))
-```
 
-end of the data manipulation
 
-```{r,message=FALSE}
+#end of the data manipulation
+
+
 
 fifa_data %>%
   ggplot(aes(x= Overall)) +
   geom_histogram(color = "white", fill = "grey") +
   ggtitle("Player Ratings Distribution") 
-```
 
-```{r}
+
+
 fifa_data %>%
   filter(!PositionGroup %in% c("GK", "Unknown")) %>%
   group_by(Age) %>%
@@ -73,10 +69,10 @@ fifa_data %>%
   geom_line(color = "grey50", size = 1) +
   ggtitle("The Age Curve Flattens Off", subtitle = "Player ratings tend not to get better after the age of 30") +
   xlab("Age") 
-```
 
 
-```{r}
+
+
 fifa_data %>%
   filter(!PositionGroup %in% c("GK", "Unknown")) %>%
   group_by(PositionGroup, Age) %>%
@@ -85,10 +81,10 @@ fifa_data %>%
   geom_line(size = 0.5, color = "black") +
   facet_wrap(~ PositionGroup, ncol = 1) +
   theme(strip.background = element_rect(fill = "darkgrey"), strip.text = element_text(colour = "white", face = "bold"))
-```
 
 
-```{r,message=FALSE,warning=FALSE}
+
+
 #Valuation on a log scale, so differences \nbetween the age groups are significant
 #Players Are In High Demand In Their Mid-20s
 fifa_data %>%
@@ -96,9 +92,9 @@ fifa_data %>%
   geom_boxplot(fill = "darkgrey") +
   scale_y_log10(labels = dollar_format(prefix = "€")) +
   ggtitle("Log Valuation Versus Age Group") 
-```
 
-```{r,warning=FALSE,fig.height=5}
+
+
 a <- fifa_data %>%
   filter(PositionGroup != "Unknown") %>%
   ggplot(aes(x= PositionGroup, y= ValueNumeric_pounds)) +
@@ -115,9 +111,9 @@ b <- fifa_data %>%
   coord_flip() +
   facet_wrap(~ PositionGroup, scales = "free") 
 gridExtra::grid.arrange(a, b)
-```
 
-```{r}
+
+
 fifa_data <- fifa_data  %>%
   mutate(AttackingRating = (Finishing + LongShots + Penalties + ShotPower + Positioning) /5)
 
@@ -129,11 +125,11 @@ data_cluster <- fifa_data %>%
   select(-ID, -`Jersey Number`, -AttackingRating, -starts_with("Value"), - starts_with("Wage"), -starts_with("GK"), -Overall)
 
 scaled_data <- scale(data_cluster)
-```
 
 
 
-```{r}
+
+
 set.seed(14)
 
 wss <- 0
@@ -143,7 +139,7 @@ wss <- 0
 
 for (j in 1:10) {
   km.out <- kmeans(scaled_data[1:4000,], centers = j,iter.max=50, nstart = 500)
-  # Save total within sum of squares to wss variable
+# Save total within sum of squares to wss variable
   wss[j] <- km.out$tot.withinss
 }
 
@@ -155,9 +151,9 @@ ggplot(data = wss_df, aes(x=num_cluster, y= wgss)) +
   geom_point(color = "blue", size = 2) +
   labs(title = "elbow method")
 
-```
 
-```{r}
+
+
 wisc.km <- kmeans(scale(data_cluster), centers = 5, nstart = 20)
 #wisc.km <- kmeans(scale(data_cluster), centers = 2, nstart = 20)
 
@@ -173,11 +169,11 @@ cluster_analysis <- cluster_data %>%
   select(ID, Name, Club, Age, PositionGroup, Overall, Cluster, ValueNumeric_pounds)
 
 table(cluster_analysis$Cluster, cluster_analysis$PositionGroup)
-```
 
 
 
-```{r}
+
+
 cluster_analysis$Cluster <- as.factor(cluster_analysis$Cluster)
 data_cluster$Cluster <- as.factor(cluster_analysis$Cluster)
 cluster_data$Cluster <- as.factor(cluster_analysis$Cluster)
@@ -202,7 +198,7 @@ d <- Cluster4 %>%
 
 d
 
-```
+
 
 
 
