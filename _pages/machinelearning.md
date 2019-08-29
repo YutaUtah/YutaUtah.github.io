@@ -1,7 +1,7 @@
 ---
 layout: posts
 permalink: /projects/
-title: "Miscellaneous Projects"
+title: "Projects"
 author_profile: true
 ---
 
