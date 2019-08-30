@@ -6,8 +6,8 @@ main:
     url: /projects/
   - title: "CV"
     url: /images/Hayashi_Yuta.Resume.pdf
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "Sample Posts"
+     url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
